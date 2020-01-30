@@ -12,7 +12,10 @@ export class TodoService {
     
   ]
   constructor() { }
-  getTodos(){
+  getTodos(status: string){
+    if(status){
+      return this.todoList.filter(todo => todo.status === status);
+    }
     return this.todoList;
   }
   deleteTodo(todo: ITodo) {
@@ -22,5 +25,7 @@ export class TodoService {
   addTodo(todo: ITodo):void {
     todo.id = this.todoId ++;
     this.todoList.push(todo);
+
+    
   }
 }
