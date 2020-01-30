@@ -11,7 +11,8 @@ import { ConfirmationModalComponent } from '../confirmation-modal/confirmation-m
 export class TodoComponent implements OnInit {
   @Input() todo
   constructor(private todoService : TodoService, private modalService : NgbModal) { }
-  todoTitle = ''
+  todoTitle = ""
+  
   ngOnInit() {
   }
   async deleteTodo(todo){
