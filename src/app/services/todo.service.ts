@@ -39,7 +39,7 @@ export class TodoService {
   }
 
   editTodo(todo):ITodo{
-    //this.editTodo.description = todo.description;
+    //this.editTodo.description = todo.description :) ;
     return todo.description;
 
   }
