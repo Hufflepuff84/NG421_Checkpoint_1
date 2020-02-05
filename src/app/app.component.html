@@ -1,15 +1,8 @@
 <h1 align="center">Todo List</h1>
 
-<app-create-todo></app-create-todo>
-
-<app-todo-list></app-todo-list>
-
-<router-outlet></router-outlet>
-
-<app-board></app-board>
-<app-board></app-board>
-<app-board></app-board>
+<nav>
+    <a class="btn btn-info" routerLink="/" routerLinkActive="active">Todo List  </a>
+    <a class="btn btn-info"routerLink="/tableview" routerLinkActive="active">Todo Table</a>
+</nav>
 
 <router-outlet></router-outlet>
-<table mat-table [dataSource]="PLAYER_DATA" class='mat-elevation-z8'>
-

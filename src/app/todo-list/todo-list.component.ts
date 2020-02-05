@@ -7,17 +7,18 @@ import {TodoService} from '../services/todo.service';
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.css']
 })
+
+
 export class TodoListComponent implements OnInit {
-  @Input() status;
-  
-  todoList: ITodo [] = [ ]
-  
-  
+  @Input() status: string
+
+  get todoList() {
+    return this.todoService.getTodos(this.status);
+  }
   constructor(private todoService : TodoService) { }
 
   ngOnInit() {
-    this.todoList = this.todoService.getTodos(status);
-    console.log ("These are your ToDos");
+    
   }
 
 }
